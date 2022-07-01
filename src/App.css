@@ -1,38 +1,143 @@
-.App {
+.userSelectionScreen{
+  background-color: rgb(16, 216, 16);
+  height: 100vh;  max-height: -webkit-fill-available;
+}
+
+.userSelectionScreen-username{
+  color: white;
+  font-size: 1.6rem;
+  padding: 2rem 1rem;
+
+
+}
+.userSelectionScreen-username span{
+  margin-left: .5rem;
+}
+
+.userSelectionScreen-navigations{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: .7rem;
+  color: #fff;
+}
+
+.userSelectionScreen-navigations-navigation-links{
+  color: white;
+  background-color: rgba(2, 54, 2, 0.904);
+  padding: 1.9rem 2rem;
+  width: 130px;
+  text-align: center;
+  margin: .6rem;
+  text-decoration: none;
+  font-weight: bolder;
+  font-size: 1.4rem;
+  border-radius: 50%;
+  
+}
+
+.nutrition-details-page{
+  background-color: rgb(16, 216, 16);
+ height: 100vh;  max-height: -webkit-fill-available;
+
+}
+
+.nutrition-details-heading{
+  text-align: center;
+  color: #fff;
+}
+
+.nutrition-detail-form{
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.nutrition-detail-form input{
+  font-size: 1.2rem;
+  outline: none;
+  border: none;
+  padding: .9rem .8rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.nutrition-detail-form  i{
+  background-color: white;
+  font-size: 1.7rem;
+  padding: .9rem .9rem;
+  color: green;
+  
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nutrition-detail-form-div{
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: 80%;
+  margin: auto;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin-bottom: 15px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.nutrition-detail-form i:active{
+  transform: scale(1.05);
+}
+
+.nutrition-details-page-nutrition-information{
+  color: black;
+  margin-top: 2rem;
+  
+}
+
+li{
+  list-style: none;
+  font-size: 1.4rem;
+  font-weight: bolder;
+  margin: 1.2rem 0;
+  background-color: white;
+  padding: .7rem .7rem;
+  width: 80%;
+  border-radius: 60px;
+  
+}
+.NutritionScreen-btn{
+  padding-top: 1.2rem;
+  text-align: right;
+  
+  
+  
+}
+.go-back-btn{
+  /* text-decoration: none;
   color: white;
+  background-color: white;
+  color: green;
+  padding: .7rem 6rem;
+  border-radius: 20px; */
+  
+  
+}
+.go-back-btn i{
+  font-size: 2.5rem;
+  /* margin-left: 2rem; */
+  color: purple;
+  margin-right: 2rem;
+  
 }
 
-.App-link {
-  color: #61dafb;
+.nutrition-details-heading-span{
+  display: block;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+/*Recipe*/
+
+.recipe{
+  background-color: rgb(16, 216, 16);
+  height: 100vh;  max-height: -webkit-fill-available;
+}
+
+.recipe-heading{
+  color: white;
+  font-size: 2.7rem;
+  margin-left: 3rem;
 }

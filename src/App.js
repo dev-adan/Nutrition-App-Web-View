@@ -1,24 +1,49 @@
-import logo from './logo.svg';
 import './App.css';
+import { ReactDOM } from 'react';
+import {
+  Routes,
+  Route,Link
+} from "react-router-dom";
+
+import HomeScreen from './Pages/HomeScreen';
+import DietPlan from './Pages/DietPlan';
+import Ideas from './Pages/Ideas';
+import NutiritionDetails from './Pages/NutiritionDetails';
+import Recipes from './Pages/Recipes';
+import Video from './Pages/Video';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  <div >
+    {/* <nav className='userSelectionScreen-username'>
+    <i class="fa-solid fa-user"></i><span>username</span> */}
+
+    <Routes>
+      <Route path='/' element={<HomeScreen/>} />
+        <Route path="/dietplan" element={<DietPlan />} />
+        <Route path="/ideas" element={<Ideas />} />
+        <Route path="/nutrition-details" element={<NutiritionDetails />} />
+        <Route path="/recipes" element={<Recipes />} />
+        <Route path="/Video" element={<Video />} />
+      </Routes>
+
+    
+
+    {/* </nav>
+
+    <main className='userSelectionScreen-navigations'>
+        <Link className='userSelectionScreen-navigations-navigation-links' to='/dietplan'>DietPlan</Link>
+        <Link className='userSelectionScreen-navigations-navigation-links' to='/ideas'>Ideas</Link>
+        <Link className='userSelectionScreen-navigations-navigation-links' to='/nutrition-details'>Nutrition Details</Link>
+        <Link className='userSelectionScreen-navigations-navigation-links' to='/recipes'>Recipes</Link>
+        <Link className='userSelectionScreen-navigations-navigation-links' to='/video'>Videos</Link>
+    </main> */}
+
+
+
+
+
+  </div>
   );
 }
 
