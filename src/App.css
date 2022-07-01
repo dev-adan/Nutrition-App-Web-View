@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=BIZ+UDGothic&family=Barlow+Condensed:wght@100&family=Dancing+Script:wght@500&family=Permanent+Marker&family=Playfair+Display:ital@1&display=swap');
 .userSelectionScreen{
   background-color: rgb(16, 216, 16);
   height: 100vh;  max-height: -webkit-fill-available;
@@ -133,11 +134,102 @@ li{
 
 .recipe{
   background-color: rgb(16, 216, 16);
-  height: 100vh;  max-height: -webkit-fill-available;
+ 
+  height: 100%;  max-height: -webkit-fill-available;
+  padding-bottom: 4rem;
 }
 
 .recipe-heading{
   color: white;
   font-size: 2.7rem;
   margin-left: 3rem;
+}
+
+
+.recipe-card {
+
+  background-color: white;
+  width: 90%;
+  margin: auto;
+  border-radius: 30px;
+  
+
+}
+
+.recipe-card-name{
+  color: black;
+  font-size: 1.6rem;
+  text-align: center;
+  color: red;
+  
+}
+.recipe-card-name-span{
+  display: block;
+  color: purple;
+}
+
+.recipe-card-ingredients{
+  text-align: center;
+
+
+}
+
+.recipe-ingredients-list{
+display: flex;
+justify-content: center;
+align-items: flex-start;
+
+  
+}
+
+.recipe-ingredients-list div{
+  margin: 1rem 2rem;
+  
+
+}
+
+.recipe-ingredients-list li{
+  font-size: .8rem;
+ background-color: greenyellow;
+ color: black;
+ text-align: center;
+ margin-top: 2rem;
+ white-space: nowrap
+
+
+ 
+ 
+}
+
+.instructions-div{
+  padding: 1rem;
+}
+
+.instructions-div p{
+  font-size: 1.5rem;
+  line-height: 3rem;
+
+  font-family: 'BIZ UDGothic', sans-serif;
+  font-weight: bolder;
+  text-align: center;
+}
+
+
+
+.instruction-div-heading{
+  text-align: center;
+  color: red;
+}
+
+
+.recipe-image-container{
+  width: 100%;
+  margin: auto;
+}
+.recipe-image-container img{
+  width: 100%;
+
+}
+body{
+  background-color: rgb(16, 216, 16);
 }
