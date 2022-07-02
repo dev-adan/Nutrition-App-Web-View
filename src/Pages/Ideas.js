@@ -1,14 +1,12 @@
-import React, {useState} from "react";
-import {Link} from 'react-router-dom'
+import SearchIdeas from "./searchIdea";
 
-const Ideas = () => {
-
-
+function Ideas() {
   return (
-    <div className="ideas">
-      ideas
+    <div className="container">
+      <h1 className="title">Ideas</h1>
+      <SearchIdeas />
     </div>
   );
-};
+}
 
 export default Ideas;

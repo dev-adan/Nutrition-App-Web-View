@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=BIZ+UDGothic&family=Barlow+Condensed:wght@100&family=Dancing+Script:wght@500&family=Permanent+Marker&family=Playfair+Display:ital@1&display=swap');
 .userSelectionScreen{
   background-color: rgb(16, 216, 16);
   height: 100vh;  max-height: -webkit-fill-available;
@@ -51,6 +50,7 @@
 
 .nutrition-detail-form{
   text-align: center;
+  
 }
 
 .nutrition-detail-form input{
@@ -152,6 +152,8 @@ li{
   width: 90%;
   margin: auto;
   border-radius: 30px;
+  -webkit-box-shadow: 5px 5px 42px -1px #000000; 
+  box-shadow: 5px 5px 42px -1px #000000;
   
 
 }
@@ -183,7 +185,7 @@ align-items: flex-start;
 }
 
 .recipe-ingredients-list div{
-  margin: 1rem 2rem;
+  margin: 1rem .5rem;
   
 
 }
@@ -208,9 +210,6 @@ align-items: flex-start;
 .instructions-div p{
   font-size: 1.5rem;
   line-height: 3rem;
-
-  font-family: 'BIZ UDGothic', sans-serif;
-  font-weight: bolder;
   text-align: center;
 }
 
@@ -233,3 +232,103 @@ align-items: flex-start;
 body{
   background-color: rgb(16, 216, 16);
 }
+
+
+/*Ideas*/
+
+.container {
+  margin: 0 auto;
+  max-width: 1000px;
+  padding: 40px;
+}
+
+.title {
+  font-size: 4.4rem;
+  text-align: left;
+  color: #fff;
+}
+
+.s-icon {
+  background-color: white;
+  font-size: 1.7rem;
+  padding: 0.9rem 0.9rem;
+  color: rgb(16, 216, 16);
+  border: none;
+  margin: 0;
+}
+
+.form {
+  display: flex;
+  width: 80%;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  background-color: white;
+  border-radius: 30px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
+}
+
+.form input {
+  border-radius: 20px;
+  line-height: 2.5rem;
+  border: 1px solid #ddd;
+  width: inherit;
+  font-size: 2rem;
+  outline: none;
+  border: none;
+  padding: 0.9rem 0.8rem;
+}
+
+.form input::placeholder {
+  background-color: white;
+  color: rgb(16, 216, 16);
+  font-size: 1.9rem;
+  padding-left: 2rem;
+}
+.form i:active {
+  transform: scale(1.05);
+}
+
+@media (min-width: 786px) {
+  .form {
+    grid-template-columns: auto 1fr auto;
+    grid-gap: 1rem;
+    align-items: center;
+  }
+
+  .input {
+    margin-bottom: 0;
+  }
+}
+
+.card-list {
+  margin-top: 4rem;
+}
+
+.card {
+  padding: 2rem 4rem;
+  border-radius: 30px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.9);
+  margin-bottom: 2rem;
+  background-color: #fff;
+  color: black;
+}
+
+.card--desc {
+  font-size: 1.7rem;
+  line-height: 2.2rem;
+  /* text-align: center; */
+}
+
+.bulb-icon {
+  display: block;
+  color: gold;
+  font-size: 2rem;
+}
+
+#small-heading {
+  margin-top: 4rem;
+  color: sienna;
+}
+
