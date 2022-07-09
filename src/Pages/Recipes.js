@@ -74,11 +74,11 @@ const Recipes = () => {
 
   return (
     <div className="recipe">
-      <nav className="NutritionScreen-btn">
-        <Link to="/" className="go-back-btn">
-          <i className="fa-solid fa-hand-point-left"></i>
-        </Link>
-      </nav>
+      <div className='recipe-upload-button-container'>
+         <Link to='/recipe/form' className='recipe-upload-button'>Upload your Recipe</Link>
+      </div>
+      <br/>
+
 
       <h1 className="recipe-heading">Recipes</h1>
 

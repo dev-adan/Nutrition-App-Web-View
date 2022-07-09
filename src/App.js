@@ -11,6 +11,8 @@ import Ideas from './Pages/Ideas';
 import NutiritionDetails from './Pages/NutiritionDetails';
 import Recipes from './Pages/Recipes';
 import Video from './Pages/Video';
+import RecipeForm from './Pages/RecipeForm'
+import UploadedRecipes from './Pages/UploadedRecipes'
 
 function App() {
   return (
@@ -25,9 +27,11 @@ function App() {
         <Route path="/nutrition-details" element={<NutiritionDetails />} />
         <Route path="/recipes" element={<Recipes />} />
         <Route path="/Video" element={<Video />} />
+        <Route path='/recipe/form' element={<RecipeForm/>}/>
+        <Route path='/recipe/uploadedrecipes' element={<UploadedRecipes/>}/>
       </Routes>
 
-    
+     
 
     {/* </nav>
 
