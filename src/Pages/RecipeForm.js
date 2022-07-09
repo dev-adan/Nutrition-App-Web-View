@@ -86,7 +86,7 @@ const RecipeForm = () => {
       
   
   <nav className="NutritionScreen-btn">
-          <Link to="/recipe" className="go-back-btn">
+          <Link to="/recipes" className="go-back-btn">
             <i className="fa-solid fa-hand-point-left"> Go Back</i>
           </Link>
 
