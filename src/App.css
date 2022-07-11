@@ -1,90 +1,83 @@
+/* adama */
 @import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
-
-.loader-center{
+.loader-center {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
-
+  transform: translate(-50%, -50%);
 }
 
 .loader-center p {
   text-align: center;
-
 }
-.userSelectionScreen{
+.userSelectionScreen {
   background-color: rgb(16, 216, 16);
-  height: 100vh;  max-height: -webkit-fill-available;
+  height: 100vh;
+  max-height: -webkit-fill-available;
 }
 
-.userSelectionScreen-username{
+.userSelectionScreen-username {
   color: white;
   font-size: 1.6rem;
   padding: 2rem 1rem;
-
-
 }
-.userSelectionScreen-username span{
-  margin-left: .5rem;
+.userSelectionScreen-username span {
+  margin-left: 0.5rem;
 }
 
-.userSelectionScreen-navigations{
+.userSelectionScreen-navigations {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: .7rem;
+  margin-top: 0.7rem;
   color: #fff;
 }
 
-.userSelectionScreen-navigations-navigation-links{
+.userSelectionScreen-navigations-navigation-links {
   color: white;
   background-color: rgba(2, 54, 2, 0.904);
   padding: 1.9rem 2rem;
   width: 130px;
   text-align: center;
-  margin: .6rem;
+  margin: 0.6rem;
   text-decoration: none;
   font-weight: bolder;
   font-size: 1.4rem;
   border-radius: 50%;
-  
 }
 
-.nutrition-details-page{
+.nutrition-details-page {
   background-color: rgb(16, 216, 16);
- height: 100vh;  max-height: -webkit-fill-available;
-
+  height: 100vh;
+  max-height: -webkit-fill-available;
 }
 
-.nutrition-details-heading{
+.nutrition-details-heading {
   text-align: center;
   color: #fff;
 }
 
-.nutrition-detail-form{
+.nutrition-detail-form {
   text-align: center;
-  
 }
 
-.nutrition-detail-form input{
+.nutrition-detail-form input {
   font-size: 1.2rem;
   outline: none;
   border: none;
-  padding: .9rem .8rem;
+  padding: 0.9rem 0.8rem;
 }
 
-.nutrition-detail-form  i{
+.nutrition-detail-form i {
   background-color: white;
   font-size: 1.7rem;
-  padding: .9rem .9rem;
+  padding: 0.9rem 0.9rem;
   color: green;
-  
-
 }
 
-.nutrition-detail-form-div{
+.nutrition-detail-form-div {
   display: flex;
   width: 80%;
   margin: auto;
@@ -94,171 +87,134 @@
   border-radius: 10px;
 }
 
-.nutrition-detail-form i:active{
+.nutrition-detail-form i:active {
   transform: scale(1.05);
 }
 
-.nutrition-details-page-nutrition-information{
+.nutrition-details-page-nutrition-information {
   color: black;
   margin-top: 2rem;
-  
 }
 
-li{
+li {
   list-style: none;
   font-size: 1.4rem;
   font-weight: bolder;
   margin: 1.2rem 0;
   background-color: white;
-  padding: .7rem .7rem;
+  padding: 0.7rem 0.7rem;
   width: 80%;
   border-radius: 60px;
-  
 }
-.NutritionScreen-btn{
+.NutritionScreen-btn {
   padding-top: 1.2rem;
   text-align: right;
-  
-  
-  
 }
-.go-back-btn{
-  /* text-decoration: none;
-  color: white;
-  background-color: white;
-  color: green;
-  padding: .7rem 6rem;
-  border-radius: 20px; */
-  
-  
-}
-.go-back-btn i{
+
+.go-back-btn i {
   font-size: 2.5rem;
   /* margin-left: 2rem; */
   color: purple;
   margin-right: 2rem;
-  
 }
 
-.nutrition-details-heading-span{
+.nutrition-details-heading-span {
   display: block;
 }
 
-
 /*Recipe*/
 
-.recipe{
+.recipe {
   background-color: rgb(16, 216, 16);
- 
-  height: 100%;  max-height: -webkit-fill-available;
+
+  height: 100%;
+  max-height: -webkit-fill-available;
   padding-bottom: 4rem;
 }
 
-.recipe-heading{
+.recipe-heading {
   color: white;
   font-size: 2.7rem;
   margin-left: 3rem;
 }
 
-
 .recipe-card {
-
   background-color: white;
   width: 90%;
   margin: auto;
   border-radius: 30px;
-  -webkit-box-shadow: 5px 5px 42px -1px #000000; 
+  -webkit-box-shadow: 5px 5px 42px -1px #000000;
   box-shadow: 5px 5px 42px -1px #000000;
-  
-
 }
 
-.recipe-card-name{
+.recipe-card-name {
   color: black;
   font-size: 1.6rem;
   text-align: center;
   color: red;
-  
 }
-.recipe-card-name-span{
+.recipe-card-name-span {
   display: block;
   color: purple;
 }
 
-.recipe-card-ingredients{
+.recipe-card-ingredients {
   text-align: center;
-
-
 }
 
-.recipe-ingredients-list{
-display: flex;
-justify-content: center;
-align-items: flex-start;
-
-  
+.recipe-ingredients-list {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
 
-.recipe-ingredients-list div{
-  margin: 1rem .5rem;
-  
-
+.recipe-ingredients-list div {
+  margin: 1rem 0.5rem;
 }
 
-.recipe-ingredients-list li{
-  font-size: .8rem;
- background-color: greenyellow;
- color: black;
- text-align: center;
- margin-top: 2rem;
- white-space: nowrap
-
-
- 
- 
+.recipe-ingredients-list li {
+  font-size: 0.8rem;
+  background-color: greenyellow;
+  color: black;
+  text-align: center;
+  margin-top: 2rem;
+  white-space: nowrap;
 }
 
-.instructions-div{
+.instructions-div {
   padding: 1rem;
 }
 
-.instructions-div p{
+.instructions-div p {
   font-size: 1.5rem;
   line-height: 3rem;
   text-align: center;
 }
 
-
-
-.instruction-div-heading{
+.instruction-div-heading {
   text-align: center;
   color: red;
 }
 
-
-.recipe-image-container{
+.recipe-image-container {
   width: 100%;
   margin: auto;
 }
-.recipe-image-container img{
+.recipe-image-container img {
   width: 100%;
-
 }
-body{
-  background-color: rgb(16, 216, 16); 
+body {
+  background-color: rgb(16, 216, 16);
 }
 
-.recipe-upload-button{
+.recipe-upload-button {
   text-decoration: none;
   color: black;
- 
+
   /* padding: 1rem 2rem; */
-
-
-  
 }
 
-.recipe-upload-button-container{
+.recipe-upload-button-container {
   background-color: white;
   padding: 1rem 2rem;
   text-align: center;
@@ -266,26 +222,19 @@ body{
   width: 60%;
   border-radius: 15px 50px 10px 51px;
   margin-top: 2rem;
- 
-  
-
-} 
-.recipeform-form-container{
-  /* margin-top: 4rem; */
 }
 
-
-.recipeform-form{
+.recipeform-form {
   background-color: white;
   display: flex;
   flex-direction: column;
   padding: 1rem 1rem;
-  box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.5);
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5);
   width: 88%;
   margin: auto;
 }
 
-.recipeform-form input{
+.recipeform-form input {
   height: 30px;
 }
 
@@ -295,65 +244,60 @@ body{
   background-color: white;
   color: black;
 }
-.recipeform-form-p{
+.recipeform-form-p {
   font-size: 1.2rem;
   color: purple;
   font-weight: bolder;
 }
-.recipe-form-textarea{
+.recipe-form-textarea {
   height: 60px;
 }
 
-.recipeform-submitbtn{
+.recipeform-submitbtn {
   margin-top: 1rem;
-  padding: .8rem;
+  padding: 0.8rem;
   font-size: 1.4rem;
   background-color: white;
   font-weight: bold;
 }
-.recipeform-form-image{
+.recipeform-form-image {
   width: 100px;
-  margin-top: .5rem;
-
-  
+  margin-top: 0.5rem;
 }
 
-
-.loader-uploading{
+.loader-uploading {
   -webkit-animation: blink-1 0.6s both;
-	        animation: blink-1 0.6s both;
-          animation-iteration-count: infinite;
+  animation: blink-1 0.6s both;
+  animation-iteration-count: infinite;
 }
-.uploaded-recipees{
+.uploaded-recipees {
   padding-bottom: 4rem;
 }
-.single-recipe{
+.single-recipe {
   background-color: white;
   padding: 1rem;
   width: 88%;
   margin: auto;
-  box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.5);
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5);
   border-radius: 10px;
- margin-top: 2rem;
-  
+  margin-top: 2rem;
 }
 
-.single-recipe-name{
+.single-recipe-name {
   text-align: center;
   font-size: 1.4rem;
   color: purple;
-
 }
-.single-recipe-image-container{
+.single-recipe-image-container {
   width: 100%;
   /* height: 100%; */
 }
-.single-recipe-image{
+.single-recipe-image {
   width: 100%;
-  box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.4);
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.4);
 }
 
-.single-recipe-instructions{
+.single-recipe-instructions {
   line-height: 1.9;
   font-weight: 500;
 }
@@ -456,8 +400,6 @@ body{
   color: sienna;
 }
 
-
-
 /*Animation*/
 
 @-webkit-keyframes blink-1 {
@@ -481,4 +423,401 @@ body{
   75% {
     opacity: 0;
   }
+}
+
+/* MINE */
+.userSelectionScreen {
+  background-color: rgb(16, 216, 16);
+
+  height: 100vh;
+  max-height: -webkit-fill-available;
+}
+
+.userSelectionScreen-username {
+  color: white;
+  font-size: 1.6rem;
+  padding: 2rem 1rem;
+}
+.userSelectionScreen-username span {
+  margin-left: 0.5rem;
+}
+
+.userSelectionScreen-navigations {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.7rem;
+  color: #fff;
+}
+
+.userSelectionScreen-navigations-navigation-links {
+  color: white;
+  background-color: rgba(2, 54, 2, 0.904);
+  padding: 1.9rem 2rem;
+  width: 130px;
+  text-align: center;
+  margin: 0.6rem;
+  text-decoration: none;
+  font-weight: bolder;
+  font-size: 1.4rem;
+  border-radius: 50%;
+}
+
+.nutrition-details-page {
+  background-color: rgb(16, 216, 16);
+  height: 100vh;
+  max-height: -webkit-fill-available;
+}
+
+.nutrition-details-heading {
+  text-align: center;
+  color: #fff;
+}
+
+.nutrition-detail-form {
+  text-align: center;
+}
+
+.nutrition-detail-form input {
+  font-size: 1.2rem;
+  outline: none;
+  border: none;
+  padding: 0.9rem 0.8rem;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.nutrition-detail-form i {
+  background-color: white;
+  font-size: 1.7rem;
+  padding: 0.9rem 0.9rem;
+  color: green;
+}
+
+.nutrition-detail-form-div {
+  display: flex;
+  width: 80%;
+  margin: auto;
+  justify-content: center;
+  margin-bottom: 15px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.nutrition-detail-form i:active {
+  transform: scale(1.05);
+}
+
+.nutrition-details-page-nutrition-information {
+  color: black;
+  margin-top: 2rem;
+}
+
+li {
+  list-style: none;
+  font-size: 1.4rem;
+  font-weight: bolder;
+  margin: 1.2rem 0;
+  background-color: white;
+  padding: 0.7rem 0.7rem;
+  width: 80%;
+  border-radius: 60px;
+}
+.NutritionScreen-btn {
+  padding-top: 1.2rem;
+  text-align: right;
+}
+/* .go-back-btn {
+  text-decoration: none;
+  color: white;
+  background-color: white;
+  color: green;
+  padding: .7rem 6rem;
+  border-radius: 20px;
+} */
+.go-back-btn i {
+  font-size: 2.5rem;
+  /* margin-left: 2rem; */
+  color: purple;
+  margin-right: 2rem;
+}
+
+.nutrition-details-heading-span {
+  display: block;
+}
+
+/*Recipe*/
+
+.recipe {
+  background-color: rgb(16, 216, 16);
+
+  height: 100%;
+  max-height: -webkit-fill-available;
+  padding-bottom: 4rem;
+}
+
+.recipe-heading {
+  color: white;
+  font-size: 2.7rem;
+  margin-left: 3rem;
+}
+
+.recipe-card {
+  background-color: white;
+  width: 90%;
+  margin: auto;
+  border-radius: 30px;
+  -webkit-box-shadow: 5px 5px 42px -1px #000000;
+  box-shadow: 5px 5px 42px -1px #000000;
+}
+
+.recipe-card-name {
+  color: black;
+  font-size: 1.6rem;
+  text-align: center;
+  color: red;
+}
+.recipe-card-name-span {
+  display: block;
+  color: purple;
+}
+
+.recipe-card-ingredients {
+  text-align: center;
+}
+
+.recipe-ingredients-list {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.recipe-ingredients-list div {
+  margin: 1rem 0.5rem;
+}
+
+.recipe-ingredients-list li {
+  font-size: 0.8rem;
+  background-color: greenyellow;
+  color: black;
+  text-align: center;
+  margin-top: 2rem;
+  white-space: nowrap;
+}
+
+.instructions-div {
+  padding: 1rem;
+}
+
+.instructions-div p {
+  font-size: 1.5rem;
+  line-height: 3rem;
+  text-align: center;
+}
+
+.instruction-div-heading {
+  text-align: center;
+  color: red;
+}
+
+.recipe-image-container {
+  width: 100%;
+  margin: auto;
+}
+.recipe-image-container img {
+  width: 100%;
+}
+body {
+  background-color: rgb(16, 216, 16);
+}
+
+/*Ideas*/
+
+.container {
+  margin: 0 auto;
+  max-width: 1000px;
+  padding: 40px;
+}
+
+.title {
+  font-size: 2.7rem;
+  color: #fff;
+}
+
+@media (min-width: 786px) {
+  .form {
+    grid-template-columns: auto 1fr auto;
+    grid-gap: 1rem;
+    align-items: center;
+  }
+
+  .input {
+    margin-bottom: 0;
+  }
+}
+
+.card-list {
+  margin-top: 4rem;
+}
+
+.card {
+  padding: 1.5rem 2rem;
+  border-radius: 30px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.9);
+  margin-bottom: 2rem;
+  background-color: #fff;
+  color: black;
+}
+
+.card--desc {
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+}
+
+.bulb-icon {
+  display: block;
+  color: gold;
+
+  font-size: 1.5rem;
+}
+
+#small-heading {
+  font-size: 1.7rem;
+  margin-top: 1.5rem;
+  color: sienna;
+}
+
+/* Diet Plan */
+
+.nutrients {
+  text-align: center;
+  width: 80%;
+  padding: 0.5rem;
+  margin: 0 auto;
+}
+.nutrients h1 {
+  font-size: rem;
+}
+.nutrients ul li {
+  color: white;
+  background-color: green;
+}
+
+.meal-card {
+  margin: 3rem;
+  display: block;
+  border-radius: 30px;
+  box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.9);
+  padding: 1rem;
+  background-color: #fff;
+}
+
+.meal-card h1 {
+  text-align: center;
+  font-size: 1.5em;
+  color: white;
+  background-color: green;
+  width: 80%;
+  margin: 1rem auto;
+  padding: 1rem;
+  border-radius: 30px;
+}
+
+.meal-card img {
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+  border-radius: 20px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.9);
+  background-color: #fff;
+}
+
+.meal-card ul {
+  text-align: center;
+  padding: 0.5rem;
+}
+.meal-card li {
+  color: white;
+  background-color: green;
+  width: 80%;
+  padding: 1.5rem;
+  margin: 0.5rem auto;
+  border-radius: 20px;
+}
+
+/* Video */
+
+.video-heading {
+  color: white;
+  font-size: 2rem;
+  margin: 1.2rem;
+}
+
+.btns {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+.select-file {
+  width: 0.1px;
+  height: 0.1px;
+}
+.select-file + label {
+  display: flex;
+
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.9);
+  padding: 0.7rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: white;
+  background-color: green;
+}
+
+.upload-file {
+  display: flex;
+  flex-direction: row;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.9);
+  border: none;
+  padding: 0.7rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: white;
+  background-color: green;
+}
+
+#video-icon {
+  color: white;
+  font-size: 2rem;
+}
+
+#progress {
+  padding: 1rem;
+  color: white;
+}
+#progress > span {
+  color: green;
+}
+
+.video {
+  display: flex;
+  padding: 0.5rem;
+  width: 100%;
+  height: 178.5px;
+}
+
+.vid-li {
+ 
+  border: 2px solid green;
+  margin: 1rem;
+  background-color: white;
+  width: 120px;
+  height: 200px;
+  margin-left: 2.1rem;
 }

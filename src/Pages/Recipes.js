@@ -8,12 +8,12 @@ const Recipes = () => {
 
   const [recipeFinalData, setRecipeFinalData] = useState([
     {
-      ingredients : [],
-      measure : [],
-      name : '',
-      instruction :'',
-      image : '',
-    }
+      ingredients: [],
+      measure: [],
+      name: "",
+      instruction: "",
+      image: "",
+    },
   ]);
 
   useEffect(() => {
@@ -24,8 +24,8 @@ const Recipes = () => {
     let ingredients = [];
     let measure = [];
     let name = "";
-    let instructions = '';
-    let image = '';
+    let instructions = "";
+    let image = "";
 
     if (recipe.length >= 1) {
       for (let i = 1; i <= 20; i++) {
@@ -44,10 +44,14 @@ const Recipes = () => {
     ingredients = ingredients.filter((e) => e);
     measure = measure.filter((e) => e);
 
-    measure = measure.filter(function(entry) { return entry.trim() != ''; });
-    ingredients = ingredients.filter(function(entry) { return entry.trim() != ''; });
+    measure = measure.filter(function (entry) {
+      return entry.trim() != "";
+    });
+    ingredients = ingredients.filter(function (entry) {
+      return entry.trim() != "";
+    });
 
-    setRecipeFinalData([{ ingredients, measure, name,instructions , image}]);
+    setRecipeFinalData([{ ingredients, measure, name, instructions, image }]);
 
     console.log(recipeFinalData);
   };
@@ -74,15 +78,19 @@ const Recipes = () => {
 
   return (
     <div className="recipe">
-      <div className='recipe-upload-button-container'>
-         <Link to='/recipe/form' className='recipe-upload-button'>Upload your Recipe</Link>
+      <div className="recipe-upload-button-container">
+        <Link to="/recipe/form" className="recipe-upload-button">
+          Upload your Recipe
+        </Link>
       </div>
-      <br/>
-
+      <br />
 
       <h1 className="recipe-heading">Recipes</h1>
 
-      <form className="nutrition-detail-form">
+      <form
+        className="nutrition-detail-form"
+        onSubmit={(e) => e.preventDefault()}
+      >
         <div className="nutrition-detail-form-div">
           <input
             type="text"
@@ -105,41 +113,41 @@ const Recipes = () => {
               : "search..."}
           </span>
         </h1>
-        <div className='recipe-image-container'>
-              < img src={recipeFinalData[0].image} alt></img>
+        <div className="recipe-image-container">
+          <img src={recipeFinalData[0].image} alt></img>
         </div>
-    
+
         <hr />
         <br />
         <h2 className="recipe-card-ingredients">Ingredients & quantity</h2>
 
-        <div class='recipe-ingredients-list'>
-
+        <div class="recipe-ingredients-list">
           <div>
-             {recipeFinalData[0].ingredients.map((data) => {
-             return <li><i class="fa-solid fa-champagne-glasses"></i> {data}</li>
-          })}
+            {recipeFinalData[0].ingredients.map((data) => {
+              return (
+                <li>
+                  <i class="fa-solid fa-champagne-glasses"></i> {data}
+                </li>
+              );
+            })}
           </div>
           <div>
-             {recipeFinalData[0].measure.map((data) => {
-            return <li>{data}</li>
-          })}
+            {recipeFinalData[0].measure.map((data) => {
+              return <li>{data.substring(0,17)}</li>;
+            })}
           </div>
-         
-
-         
         </div>
-        <div className='instructions-div'>
-          <h1 className='instruction-div-heading'><i class="fa-solid fa-map"></i> Instructions</h1>
-        <p className="recipe-instructions">
+        <div className="instructions-div">
+          <h1 className="instruction-div-heading">
+            <i class="fa-solid fa-map"></i> Instructions
+          </h1>
+          <p className="recipe-instructions">
             {recipeFinalData.length >= 1
               ? recipeFinalData[0].instructions
               : "search..."}
-        </p>
+          </p>
         </div>
       </div>
-
-      
     </div>
   );
 };

@@ -1,7 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import IdeaCard from "./IdeaCard";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
 export const data = [
   {
@@ -60,35 +58,36 @@ export default function SearchIdea() {
   const [query, setQuery] = useState("");
   const [idea, setIdea] = useState([]);
 
+  useEffect(() => {
+    setIdea([data[9].body]);
+  }, []);
+
   const SearchIdea = async (e) => {
     e.preventDefault();
 
     data.find((obj) => {
-      if (query === obj.name) {
+      if (query.toLowerCase() === obj.name) {
         setIdea([obj.body, ...idea]);
-        console.log(obj.body);
-        console.log(idea);
       }
-      // console.log(idea);
     });
   };
 
   return (
     <>
-      <form className="form" onSubmit={SearchIdea}>
-        <input
-          className="input"
-          type="text"
-          name="query"
-          placeholder="Search For Ideas"
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-        />
-        <FontAwesomeIcon
-          className="s-icon"
-          icon={faMagnifyingGlass}
-          onClick={SearchIdea}
-        ></FontAwesomeIcon>
+      <form className="nutrition-detail-form" onSubmit={SearchIdea}>
+        <div className="nutrition-detail-form-div">
+          <input
+            type="text"
+            name="query"
+            placeholder="Search For Ideas"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+          />
+          <i
+            className="fa-solid fa-solid fa-magnifying-glass"
+            onClick={SearchIdea}
+          ></i>
+        </div>
       </form>
       <h1 id="small-heading">Searhed Ideas</h1>
       <div className="card-list">
