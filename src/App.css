@@ -221,7 +221,7 @@ body {
   font-size: 1.3rem;
   width: 60%;
   border-radius: 15px 50px 10px 51px;
-  margin-top: 2rem;
+  margin-top: .5rem;
 }
 
 .recipeform-form {
@@ -532,19 +532,11 @@ li {
   padding-top: 1.2rem;
   text-align: right;
 }
-/* .go-back-btn {
-  text-decoration: none;
-  color: white;
-  background-color: white;
-  color: green;
-  padding: .7rem 6rem;
-  border-radius: 20px;
-} */
+
 .go-back-btn i {
   font-size: 2.5rem;
-  /* margin-left: 2rem; */
-  color: purple;
-  margin-right: 2rem;
+  color: green;
+  margin-right: 1.5rem;
 }
 
 .nutrition-details-heading-span {
@@ -641,10 +633,13 @@ body {
 .container {
   margin: 0 auto;
   max-width: 1000px;
-  padding: 40px;
+  padding: 0 40px 0 40px;
 }
-
+.container i {
+  margin: 0;
+}
 .title {
+  margin-top: 0;
   font-size: 2.7rem;
   color: #fff;
 }
@@ -763,7 +758,8 @@ body {
   align-items: center;
   justify-content: space-around;
   margin-top: 2.5rem;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.5rem;
+  margin-left: 7rem;
 }
 .select-file {
   width: 0.1px;
@@ -798,7 +794,7 @@ body {
 }
 
 #progress {
-  padding: 1rem;
+  margin: 1rem;
   color: white;
 }
 #progress > span {
@@ -808,16 +804,16 @@ body {
 .video {
   display: flex;
   padding: 0.5rem;
-  width: 100%;
-  height: 178.5px;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 25vh;
 }
 
 .vid-li {
- 
   border: 2px solid green;
   margin: 1rem;
   background-color: white;
-  width: 120px;
-  height: 200px;
-  margin-left: 2.1rem;
+  width: 40vw;
+  height: 20vh;
 }

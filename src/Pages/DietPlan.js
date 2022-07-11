@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import MealList from "./MealList";
 
 const DietPlan = () => {
@@ -42,6 +43,11 @@ const DietPlan = () => {
 
   return (
     <>
+      <nav className="NutritionScreen-btn">
+        <Link to="/" className="go-back-btn">
+          <i className="fa-solid fa-chevron-left"></i>
+        </Link>
+      </nav>
       <h1 className="recipe-heading">Diet Plan</h1>
       <form
         className="nutrition-detail-form"

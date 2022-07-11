@@ -78,6 +78,12 @@ const Recipes = () => {
 
   return (
     <div className="recipe">
+       <nav className="NutritionScreen-btn">
+        <Link to="/" className="go-back-btn">
+          <i className="fa-solid fa-chevron-left"></i>
+        </Link>
+      </nav>
+      
       <div className="recipe-upload-button-container">
         <Link to="/recipe/form" className="recipe-upload-button">
           Upload your Recipe
@@ -86,7 +92,6 @@ const Recipes = () => {
       <br />
 
       <h1 className="recipe-heading">Recipes</h1>
-
       <form
         className="nutrition-detail-form"
         onSubmit={(e) => e.preventDefault()}
@@ -133,7 +138,7 @@ const Recipes = () => {
           </div>
           <div>
             {recipeFinalData[0].measure.map((data) => {
-              return <li>{data.substring(0,17)}</li>;
+              return <li>{data.substring(0,17)} </li>;
             })}
           </div>
         </div>

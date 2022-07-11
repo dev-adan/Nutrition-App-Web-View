@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { ref, getDownloadURL, uploadBytesResumable } from "firebase/storage";
 import { storage } from "../firebase";
 
@@ -57,6 +58,11 @@ const Video = () => {
 
   return (
     <>
+      <nav className="NutritionScreen-btn">
+        <Link to="/" className="go-back-btn">
+          <i className="fa-solid fa-chevron-left"></i>
+        </Link>
+      </nav>
       <h1 className="video-heading">Share your child video</h1>
       <div>
         {/* <form onSubmit={formHandler}>

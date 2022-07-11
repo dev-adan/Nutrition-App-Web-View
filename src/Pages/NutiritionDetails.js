@@ -78,7 +78,7 @@ const NutiritionDetails = () => {
     <div className="nutrition-details-page">
       <nav className="NutritionScreen-btn">
         <Link to="/" className="go-back-btn">
-          <i className="fa-solid fa-hand-point-left"></i>
+          <i className="fa-solid fa-chevron-left"></i>
         </Link>
       </nav>
 
