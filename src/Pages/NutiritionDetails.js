@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-//fe8ac4afa3f34082a7278ad27d4a7466
+import { Bars } from "react-loader-spinner";
 
 let apiIdSearch =
   "https://api.spoonacular.com/food/ingredients/search?query=banana&number=1&apiKey=8185abcc1a004a5591ac618dd8fa9f5f";
@@ -20,6 +20,7 @@ const NutiritionDetails = () => {
     fiber: "",
     fat: "",
   });
+  const [loader,setLoader]  = useState(false);
 
   useEffect(() => {
     fetchNutrition();
@@ -49,15 +50,19 @@ const NutiritionDetails = () => {
   };
 
   const fetchId = async () => {
+    setLoader(true)
     // const getIdUrl = `https://api.spoonacular.com/food/ingredients/search?query=${keyword}&number=1&apiKey=8185abcc1a004a5591ac618dd8fa9f5f`;
     // const getIdUrl = `https://api.spoonacular.com/food/ingredients/search?query=${keyword}&number=1&apiKey=fe8ac4afa3f34082a7278ad27d4a7466`;
     const getIdUrl = `https://api.spoonacular.com/food/ingredients/search?query=${keyword}&number=1&apiKey=b4ad5a804b5443f089c82913bee892e6`;
     try {
       const response = await axios(getIdUrl);
       setNutritionId(response.data.results[0].id);
+      setLoader(false)
     } catch (error) {
       console.log(error);
     }
+
+
   };
 
   const fetchNutrition = async () => {
@@ -73,75 +78,86 @@ const NutiritionDetails = () => {
       console.log(error);
     }
   };
+    return (
+      <div className="nutrition-details-page">
+        <nav className="NutritionScreen-btn">
+          <Link to="/" className="go-back-btn">
+            <i className="fa-solid fa-chevron-left"></i>
+          </Link>
+        </nav>
+  
+        <h1 className="nutrition-details-heading">
+          Nutrition Details{" "}
+          <span className="nutrition-details-heading-span">(Per serving)</span>
+        </h1>
+  
+        <form
+          className="nutrition-detail-form"
+          onSubmit={(e) => e.preventDefault()}
+        >
+          <div className="nutrition-detail-form-div">
+            <input
+              onChange={(e) => setKeyword(e.target.value)}
+              type="text"
+              placeholder="search item here"
+            />
+            <i className="fa-solid fa-magnifying-glass" onClick={fetchId}></i>
+          </div>
+        </form>
+  
+        {!loader ? <div className="nutrition-details-page-nutrition-information">
+          <ul>
+            {/* <li><i className="fa-solid fa-arrow-right"></i> Carbs: {nutritionData.calories} kcal</li> */}
+            <li>
+              <i className="fa-solid fa-battery-three-quarters"></i>{" "}
+              {nutritionData.calories
+                ? `Calories ${nutritionData.calories} kcal`
+                : "calories"}
+            </li>
+            <li>
+              <i className="fa-solid fa-dna"></i>{" "}
+              {nutritionData.protein
+                ? `Protein ${nutritionData.protein} gram`
+                : "proteins"}
+            </li>
+            <li>
+              <i className="fa-solid fa-fire"></i>{" "}
+              {nutritionData.carbs
+                ? `Carbs ${nutritionData.carbs} gram`
+                : "carbs"}
+            </li>
+            <li>
+              <i className="fa-solid fa-cubes-stacked"></i>{" "}
+              {nutritionData.sugar
+                ? `Sugar ${nutritionData.sugar} gram`
+                : "sugar"}
+            </li>
+            <li>
+              <i className="fa-solid fa-cannabis"></i>{" "}
+              {nutritionData.fiber
+                ? `Fiber ${nutritionData.fiber} gram`
+                : "fiber"}
+            </li>
+            <li>
+              <i className="fa-solid fa-bottle-droplet"></i>{" "}
+              {nutritionData.fat ? `Fat ${nutritionData.fat} gram` : "fat"}
+            </li>
+          </ul>
+        </div> : <div className="loader-center">
+        <Bars
+          height="150"
+          width="190"
+          ariaLabel="loading"
+          color="#fa7d19 
+          "
+        />
 
-  return (
-    <div className="nutrition-details-page">
-      <nav className="NutritionScreen-btn">
-        <Link to="/" className="go-back-btn">
-          <i className="fa-solid fa-chevron-left"></i>
-        </Link>
-      </nav>
-
-      <h1 className="nutrition-details-heading">
-        Nutrition Details{" "}
-        <span className="nutrition-details-heading-span">(Per serving)</span>
-      </h1>
-
-      <form
-        className="nutrition-detail-form"
-        onSubmit={(e) => e.preventDefault()}
-      >
-        <div className="nutrition-detail-form-div">
-          <input
-            onChange={(e) => setKeyword(e.target.value)}
-            type="text"
-            placeholder="search item here"
-          />
-          <i className="fa-solid fa-magnifying-glass" onClick={fetchId}></i>
-        </div>
-      </form>
-
-      <div className="nutrition-details-page-nutrition-information">
-        <ul>
-          {/* <li><i className="fa-solid fa-arrow-right"></i> Carbs: {nutritionData.calories} kcal</li> */}
-          <li>
-            <i className="fa-solid fa-battery-three-quarters"></i>{" "}
-            {nutritionData.calories
-              ? `Calories ${nutritionData.calories} kcal`
-              : "calories"}
-          </li>
-          <li>
-            <i className="fa-solid fa-dna"></i>{" "}
-            {nutritionData.protein
-              ? `Protein ${nutritionData.protein} gram`
-              : "proteins"}
-          </li>
-          <li>
-            <i className="fa-solid fa-fire"></i>{" "}
-            {nutritionData.carbs
-              ? `Carbs ${nutritionData.carbs} gram`
-              : "carbs"}
-          </li>
-          <li>
-            <i className="fa-solid fa-cubes-stacked"></i>{" "}
-            {nutritionData.sugar
-              ? `Sugar ${nutritionData.sugar} gram`
-              : "sugar"}
-          </li>
-          <li>
-            <i className="fa-solid fa-cannabis"></i>{" "}
-            {nutritionData.fiber
-              ? `Fiber ${nutritionData.fiber} gram`
-              : "fiber"}
-          </li>
-          <li>
-            <i className="fa-solid fa-bottle-droplet"></i>{" "}
-            {nutritionData.fat ? `Fat ${nutritionData.fat} gram` : "fat"}
-          </li>
-        </ul>
+      </div>}
       </div>
-    </div>
-  );
-};
+    );
+  
+
+
+  }
 
 export default NutiritionDetails;

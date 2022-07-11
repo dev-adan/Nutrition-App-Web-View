@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import { Bars } from "react-loader-spinner";
 
 const Recipes = () => {
   const [recipe, setRecipe] = useState([]);
@@ -15,6 +16,8 @@ const Recipes = () => {
       image: "",
     },
   ]);
+
+  const [loader,setLoader] = useState(false)
 
   useEffect(() => {
     setRecipeData();
@@ -58,24 +61,41 @@ const Recipes = () => {
 
   const clickHandler = async () => {
     let url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${keyword}`;
-    const response = await axios(url);
-    setRecipe([response.data.meals[0]]);
+    setLoader(true);
+
+    try{
+      const response = await axios(url);
+      setRecipe([response.data.meals[0]]);
+      setLoader(false)
+    }catch(error){
+      console.log(error)
+    }
+   
+
+
+   
   };
 
   const startHandler = async () => {
+
+    setLoader(true)
     let url = "https://www.themealdb.com/api/json/v1/1/random.php";
     try {
       const response = await axios(url);
       setRecipe([response.data.meals[0]]);
+      setLoader(false)
     } catch (error) {
       console.log(error);
-    }
+    }    
+    setLoader(false)
   };
 
   useEffect(() => {
+    setLoader(true)
     startHandler();
   }, []);
 
+ 
   return (
     <div className="recipe">
        <nav className="NutritionScreen-btn">
@@ -109,7 +129,7 @@ const Recipes = () => {
         </div>
       </form>
 
-      <div className="recipe-card">
+      {!loader ?   <div className="recipe-card">
         <h1 className="recipe-card-name">
           Recipe:{" "}
           <span className="recipe-card-name-span">
@@ -152,9 +172,21 @@ const Recipes = () => {
               : "search..."}
           </p>
         </div>
-      </div>
+      </div> :  <div className="loader-center" style={{marginTop : '4rem'}}>
+        <Bars
+          height="150"
+          width="190"
+          ariaLabel="loading"
+          color="#fa7d19 
+          "
+        />
+
+      </div>}
+
+    
     </div>
   );
-};
+ };
+
 
 export default Recipes;

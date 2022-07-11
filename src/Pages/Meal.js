@@ -4,17 +4,21 @@ export default function Meal({ meal }) {
   const [imageUrl, setImageUrl] = useState("");
 
   useEffect(() => {
-    fetch(
-      `https://api.spoonacular.com/recipes/${meal.id}/information?apiKey=cb1c464d94f142c08b156c5beddade8b&includeNutrition=false`
-    )
-      .then((response) => response.json())
-      .then((data) => {
-        setImageUrl(data.image);
-      })
-      .catch(() => {
-        console.log("error");
-      });
-  }, [meal.id]);
+    getImageUrl();
+  }, []);
+
+  const getImageUrl = async () => {
+    const check = localStorage.getItem("imageUrl");
+    if (check) {
+      setImageUrl(JSON.parse(check));
+    } else {
+      const api = await fetch(
+        `https://api.spoonacular.com/recipes/${meal.id}/information?apiKey=c89bdd4b9e564461bb6493c283f9b519&includeNutrition=false`
+      );
+      const data = await api.json();
+      localStorage.setItem("imageUrl", JSON.stringify(data.image));
+    }
+  };
 
   return (
     <div className="meal-card">

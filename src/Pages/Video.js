@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ref, getDownloadURL, uploadBytesResumable } from "firebase/storage";
 import { storage } from "../firebase";
+import ReactPlayer from 'react-player';
+import { Line } from 'rc-progress';
 
 const Video = () => {
   const [progress, setProgress] = useState(0);
@@ -100,11 +102,14 @@ const Video = () => {
         {/* sadasd */}
         <hr />
         <h2 id="progress">
-          Uploading: <span>{progress}%</span>{" "}
+          {/* {progress === 0 ? null :  <span>uploading {progress}%</span>} */}
+
+          { (progress === 0 || progress === 100) ? null : <><Line percent={progress} strokeWidth={4} strokeColor="#fa7d19" /> {progress}%</>}
         </h2>
       </div>
       <div>
-        <video className="video" src={video} controls muted></video>
+        {/* <video className="video" src={video} controls autoPlay type="video/ogg"></video> */}
+        <ReactPlayer url={video} className='video' playing={true} controls={true} light={true}  width={'100%'} />
       </div>
       <div>
         {src.map((item, id) => {
