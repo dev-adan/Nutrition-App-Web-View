@@ -145,7 +145,7 @@ const RecipeForm = () => {
             disabled={
               !recipe.name ||
               !recipe.instructions ||
-              !recipe.ingredients ||
+              !recipe.ingredients || 
               !recipe.photo
             }
             className="recipeform-submitbtn"

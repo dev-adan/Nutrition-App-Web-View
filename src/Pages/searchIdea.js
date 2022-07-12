@@ -98,7 +98,7 @@ export default function SearchIdea() {
           ></i>
         </div>
       </form>
-      <h1 id="small-heading">Searhed Ideas</h1>
+      <h1 id="small-heading">Search Ideas</h1>
      {!loader ?  <div className="card-list">
         {idea.map((data) => (
           <IdeaCard idea={data} key={data.id} />

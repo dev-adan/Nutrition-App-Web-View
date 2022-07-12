@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const HomeScreen = () => {
   return (
     <div className="userSelectionScreen">
-      <nav className="userSelectionScreen-username">
+      <nav className="userSelectionScreen-username" >
         <i className="fa-solid fa-user"></i>
         <span>Logged In</span>
       </nav>

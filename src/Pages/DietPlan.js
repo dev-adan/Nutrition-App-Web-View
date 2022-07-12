@@ -3,7 +3,42 @@ import { Link } from "react-router-dom";
 import MealList from "./MealList";
 
 const DietPlan = () => {
-  const [mealData, setMealData] = useState(null);
+  const [mealData, setMealData] = useState({
+    meals: [
+      {
+        id: 800043,
+        imageType: "jpg",
+        title: "Fried Green Tomato BLT Sandwich",
+        readyInMinutes: 35,
+        servings: 4,
+      },
+      {
+        id: 414104,
+        imageType: "jpg",
+        title: "Steaks with Chipotle Sauce",
+        readyInMinutes: 25,
+        servings: 4,
+        sourceUrl:
+          "https://www.tasteofhome.com/wp-content/uploads/2018/01/exps24375_WNC62337D65-3.jpg",
+      },
+      {
+        id: 875711,
+        imageType: "jpg",
+        title: "Banh Mi Nachos",
+        readyInMinutes: 75,
+        servings: 8,
+        sourceUrl:
+          "https://i1.wp.com/forksandfolly.com/wp-content/uploads/2017/09/bahn-mi-tacos-8.jpg?fit=780%2C518&ssl=1",
+      },
+    ],
+    nutrients: {
+      calories: 2000.91,
+      protein: 89.21,
+      fat: 122.39,
+      carbohydrates: 131.54,
+    },
+  });
+
   const [calories, setCalories] = useState(2000);
 
   function handleChange(e) {
@@ -12,34 +47,18 @@ const DietPlan = () => {
 
   function getMealData() {
     fetch(
-      `https://api.spoonacular.com/mealplanner/generate?apiKey=5a4878f434a64d9c8c6c00dd2c89df80&timeFrame=day&targetCalories=${calories}`
+      `https://api.spoonacular.com/mealplanner/generate?apiKey=57fe449dd3ec49beb8f006880120c125&timeFrame=day&targetCalories=${calories}`
     )
       .then((response) => response.json())
       .then((data) => {
         setMealData(data);
-        // console.log(data);
       })
       .catch(() => {
         console.log("error");
       });
   }
 
-  useEffect(() => {
-    startHandler();
-  }, []);
 
-  const startHandler = async () => {
-    const check = localStorage.getItem("mealData");
-    if (check) {
-      setMealData(JSON.parse(check));
-    } else {
-      const api = await fetch(
-        `https://api.spoonacular.com/mealplanner/generate?apiKey=57fe449dd3ec49beb8f006880120c125&timeFrame=day&targetCalories=${2000}`
-      );
-      const data = await api.json();
-      localStorage.setItem("mealData", JSON.stringify(data));
-    }
-  };
   return (
     <>
       <nav className="NutritionScreen-btn">
