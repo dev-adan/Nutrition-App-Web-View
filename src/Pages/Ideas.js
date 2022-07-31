@@ -11,6 +11,13 @@ function Ideas() {
           <i className="fa-solid fa-chevron-left"></i>
         </Link>
       </nav>
+
+      <div className="recipe-upload-button-container">
+        <Link to="/idea/uploadform" className="recipe-upload-button">
+          Upload your Idea
+        </Link>
+      </div>
+
       <h1 className="title">Ideas</h1>
       <SearchIdeas />
     </div>

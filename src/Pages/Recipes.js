@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { Bars } from "react-loader-spinner";
-
+import grocery from '../grocery.png'
 const Recipes = () => {
   const [recipe, setRecipe] = useState([]);
   const [keyword, setKeyword] = useState("");
@@ -151,7 +151,8 @@ const Recipes = () => {
             {recipeFinalData[0].ingredients.map((data) => {
               return (
                 <li>
-                  <i class="fa-solid fa-champagne-glasses"></i> {data}
+                  <img src={grocery} className='grocery'/> {data}
+                  
                 </li>
               );
             })}

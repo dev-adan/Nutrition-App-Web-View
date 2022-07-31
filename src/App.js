@@ -10,6 +10,8 @@ import Recipes from "./Pages/Recipes";
 import Video from "./Pages/Video";
 import RecipeForm from "./Pages/RecipeForm";
 import UploadedRecipes from "./Pages/UploadedRecipes";
+import UploadIdea from "./Pages/UploadIdea";
+import UploadedIdeas from "./Pages/UploadedIdeas";
 import Error from "./Pages/Error";
 
 
@@ -27,6 +29,8 @@ function App() {
         <Route path="/Video" element={<Video />} />
         <Route path="/recipe/form" element={<RecipeForm />} />
         <Route path="/recipe/uploadedrecipes" element={<UploadedRecipes />} />
+        <Route path="/idea/uploadform" element={<UploadIdea />} />
+        <Route path="/idea/uploadedideas" element={<UploadedIdeas />} />
         <Route path="*" element={<Error />} />
       </Routes>
 
