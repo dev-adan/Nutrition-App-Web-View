@@ -8,19 +8,19 @@
   transform: translate(-50%, -50%);
   margin-top: 4rem;
 }
-.loader-center-1{
+.loader-center-1 {
   /* left: 50%; */
   /* transform: translate(-50%); */
   position: relative;
- left: 30%;
- top: 20%;
- 
+  left: 30%;
+  top: 20%;
 }
+
 .loader-center p {
   text-align: center;
 }
 .userSelectionScreen {
-  background-color: rgb(16, 216, 16);
+  /* background-color: rgb(16, 216, 16); */
   height: 100vh;
   max-height: -webkit-fill-available;
 }
@@ -44,9 +44,10 @@
   align-items: center;
   margin-top: 0.7rem;
   color: #fff;
+  background-color: #fff;
 }
 
-.userSelectionScreen-navigations-navigation-links {
+/* .userSelectionScreen-navigations-navigation-links {
   color: white;
   background-color: rgba(2, 54, 2, 0.904);
   padding: 1.9rem 2rem;
@@ -57,10 +58,10 @@
   font-weight: bolder;
   font-size: 1.4rem;
   border-radius: 50%;
-}
+} */
 
 .nutrition-details-page {
-  background-color: rgb(16, 216, 16);
+  background-color: #83f28f;
   height: 100vh;
   max-height: -webkit-fill-available;
 }
@@ -85,7 +86,7 @@
   background-color: white;
   font-size: 1.7rem;
   padding: 0.9rem 0.9rem;
-  color: green;
+  color: #83f28f;
 }
 
 .nutrition-detail-form-div {
@@ -136,7 +137,7 @@ li {
 /*Recipe*/
 
 .recipe {
-  background-color: rgb(16, 216, 16);
+  background-color: #83f28f;
 
   height: 100%;
   max-height: -webkit-fill-available;
@@ -214,9 +215,6 @@ li {
 .recipe-image-container img {
   width: 100%;
 }
-body {
-  background-color: rgb(16, 216, 16);
-}
 
 .recipe-upload-button {
   text-decoration: none;
@@ -226,13 +224,12 @@ body {
 }
 
 .recipe-upload-button-container {
-  background-color: white;
-  padding: 1rem 2rem;
+  background-color: #39e75f;
+  padding: 0.5rem;
   text-align: center;
-  font-size: 1.3rem;
-  width: 60%;
-  border-radius: 15px 50px 10px 51px;
-  margin-top: .5rem;
+  width: 10%;
+
+  margin-left: 18rem;
 }
 
 .recipeform-form {
@@ -438,14 +435,14 @@ body {
 
 /* MINE */
 .userSelectionScreen {
-  background-color: rgb(16, 216, 16);
+  background-color: white;
 
   height: 100vh;
   max-height: -webkit-fill-available;
 }
 
 .userSelectionScreen-username {
-  color: white;
+  color: black;
   font-size: 1.6rem;
   padding: 2rem 1rem;
 }
@@ -460,23 +457,27 @@ body {
   align-items: center;
   margin-top: 0.7rem;
   color: #fff;
+  /* margin: 2rem; */
 }
 
 .userSelectionScreen-navigations-navigation-links {
-  color: white;
-  background-color: rgba(2, 54, 2, 0.904);
-  padding: 1.9rem 2rem;
+  color: black;
+  /* background-color: rgb(16, 216, 16); */
+  background-color: #83f28f;
+  box-shadow: 2px 5px 9px 0px rgba(0, 0, 0, 0.52);
+  padding: 1.5rem 2.2rem;
   width: 130px;
   text-align: center;
-  margin: 0.6rem;
+  color: black;
+  margin: 1rem;
   text-decoration: none;
   font-weight: bolder;
   font-size: 1.4rem;
-  border-radius: 50%;
+  border-radius: 8px;
 }
 
 .nutrition-details-page {
-  background-color: rgb(16, 216, 16);
+  background-color: #83f28f;
   height: 100vh;
   max-height: -webkit-fill-available;
 }
@@ -507,7 +508,7 @@ input::-webkit-inner-spin-button {
   background-color: white;
   font-size: 1.7rem;
   padding: 0.9rem 0.9rem;
-  color: green;
+  color: #39e75f;
 }
 
 .nutrition-detail-form-div {
@@ -540,14 +541,16 @@ li {
   border-radius: 60px;
 }
 .NutritionScreen-btn {
-  padding-top: 1.2rem;
-  text-align: right;
+  padding-top: 0.7rem;
+  text-align: left;
 }
 
 .go-back-btn i {
   font-size: 2.5rem;
-  color: green;
-  margin-right: 1.5rem;
+  color: #39e75f;
+  margin-left: 1rem;
+  margin-bottom: 0.2rem;
+  margin-top: 0.5rem;
 }
 
 .nutrition-details-heading-span {
@@ -557,7 +560,7 @@ li {
 /*Recipe*/
 
 .recipe {
-  background-color: rgb(16, 216, 16);
+  background-color: #83f28f;
 
   height: 100%;
   max-height: -webkit-fill-available;
@@ -567,14 +570,15 @@ li {
 .recipe-heading {
   color: white;
   font-size: 2.7rem;
-  margin-left: 3rem;
+  margin-top: 0;
+  margin-left: 1.5rem;
 }
 
 .recipe-card {
   background-color: white;
   width: 90%;
   margin: auto;
-  border-radius: 30px;
+  border-radius: 20px;
   -webkit-box-shadow: 5px 5px 42px -1px #000000;
   box-shadow: 5px 5px 42px -1px #000000;
 }
@@ -636,7 +640,7 @@ li {
   width: 100%;
 }
 body {
-  background-color: rgb(16, 216, 16);
+  background-color: #83f28f;
 }
 
 /*Ideas*/
@@ -761,16 +765,16 @@ body {
 .video-heading {
   color: white;
   font-size: 2rem;
-  margin: 1.2rem;
+  margin: 1rem;
 }
 
 .btns {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  margin-top: 2.5rem;
+  margin-top: 1rem;
   margin-bottom: 1.5rem;
-  margin-left: 7rem;
+  margin-left: 6rem;
 }
 .select-file {
   width: 0.1px;
@@ -778,13 +782,12 @@ body {
 }
 .select-file + label {
   display: flex;
-
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.9);
   padding: 0.7rem;
   font-size: 1rem;
   font-weight: 700;
-  color: white;
-  background-color: green;
+  color: black;
+  background-color: #39e75f;
 }
 
 .upload-file {
@@ -795,8 +798,11 @@ body {
   padding: 0.7rem;
   font-size: 1rem;
   font-weight: 700;
+  color: black;
+  background-color: #39e75f;
+}
+.upload-file > svg {
   color: white;
-  background-color: green;
 }
 
 #video-icon {
@@ -818,7 +824,7 @@ body {
   margin: 0;
   padding: 0;
   width: 60%; */
-   background-color: black;
+  background-color: black;
 }
 
 .vid-li {
@@ -827,9 +833,16 @@ body {
   background-color: white;
   width: 40vw;
   height: 20vh;
+  border-radius: 8px;
 }
 
-.grocery{
-
+.grocery {
   height: 14px;
+}
+
+.userSelectionScreen {
+  background-color: #cefad0;
+}
+.userSelectionScreen-navigations {
+  background-color: #cefad0;
 }

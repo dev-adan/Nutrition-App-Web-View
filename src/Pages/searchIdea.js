@@ -58,7 +58,7 @@ export const data = [
 export default function SearchIdea() {
   const [query, setQuery] = useState("");
   const [idea, setIdea] = useState([]);
-  const [loader,setLoader] = useState(false);
+  const [loader, setLoader] = useState(false);
 
   useEffect(() => {
     setIdea([data[9].body]);
@@ -66,13 +66,10 @@ export default function SearchIdea() {
 
   const SearchIdea = async (e) => {
     e.preventDefault();
-    setLoader(true)
+    setLoader(true);
     setTimeout(() => {
-
-      setLoader(false)
-
-    },1500)
-    
+      setLoader(false);
+    }, 1500);
 
     data.find((obj) => {
       if (query.toLowerCase() === obj.name) {
@@ -98,22 +95,24 @@ export default function SearchIdea() {
           ></i>
         </div>
       </form>
-      <h1 id="small-heading">Search Ideas</h1>
-     {!loader ?  <div className="card-list">
-        {idea.map((data) => (
-          <IdeaCard idea={data} key={data.id} />
-        ))}
-      </div> :  <div className="loader-center">
-        <Bars
-          height="150"
-          width="190"
-          ariaLabel="loading"
-          color="#fa7d19 
+      <h1 id="small-heading">Searched Ideas</h1>
+      {!loader ? (
+        <div className="card-list">
+          {idea.map((data) => (
+            <IdeaCard idea={data} key={data.id} />
+          ))}
+        </div>
+      ) : (
+        <div className="loader-center">
+          <Bars
+            height="150"
+            width="190"
+            ariaLabel="loading"
+            color="#fa7d19 
           "
-        />
-
-      </div>}
+          />
+        </div>
+      )}
     </>
   );
- 
 }
